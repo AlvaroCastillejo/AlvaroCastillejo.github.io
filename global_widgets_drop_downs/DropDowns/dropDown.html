@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the dropDown method from the DropDowns class, for the Dart programming language.">
+  <title>dropDown method - DropDowns class - drop_downs library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">equizz</a></li>
+    <li><a href="../../global_widgets_drop_downs/global_widgets_drop_downs-library.html">drop_downs</a></li>
+    <li><a href="../../global_widgets_drop_downs/DropDowns-class.html">DropDowns</a></li>
+    <li class="self-crumb">dropDown method</li>
+  </ol>
+  <div class="self-name">dropDown</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-method">dropDown</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/widgets/Column-class.html">Column</a></span>
+<span class="name ">dropDown</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="dropDown-param-title"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">title</span>, </span></li>
+<li><span class="parameter" id="dropDown-param-dropdownValue"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">dropdownValue</span>, </span></li>
+<li><span class="parameter" id="dropDown-param-array"><span class="type-annotation">dynamic</span> <span class="parameter-name">array</span>, </span></li>
+<li><span class="parameter" id="dropDown-param-context"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="dropDown-param-message"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">message</span>, </span></li>
+<li><span class="parameter" id="dropDown-param-newGamePageState"><span class="type-annotation">dynamic</span> <span class="parameter-name">newGamePageState</span>, </span></li>
+<li><span class="parameter" id="dropDown-param-param6"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Null-class.html">Null</a></span> <span class="parameter-name">param6</span>(<ol class="parameter-list"><li><span class="parameter" id="param-msg"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">msg</span></span></li>
+</ol>
+)</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Returns a <code>Column</code>. It's a dropdown that contains the <code>array</code> options, a <code>title</code>, a <code>param6</code> callback function to update the info and a <code>message</code> to show below the dropdown.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">static Column dropDown(String title, String dropdownValue, array, BuildContext context, String message, newGamePageState, Null Function(String msg) param6){
+  switch(title){
+    case &#39;Duration&#39;:
+      index1 = dropdownValue;
+      break;
+    case &#39;Difficulties&#39;:
+      index2 = dropdownValue;
+      break;
+    case &#39;Category&#39;:
+      index3 = dropdownValue;
+      break;
+  }
+  TextStyle ts = const TextStyle(fontSize: 15, color: Colors.white);
+  if(Sizes.getScreenSize(context).width &gt; 400){
+    ts = const TextStyle(fontSize: 16, color: Colors.white);
+  }
+  return Column(
+    &#47;&#47;mainAxisAlignment: MainAxisAlignment.center,
+      children: &lt;Widget&gt;[
+        SizedBox(
+          width: Sizes.getUserInputSize(context).width,
+          height: Sizes.getPixelSize(0.03305741296, context),
+          child: Text(title, style: Theme.of(context).textTheme.headline4),
+        ),
+        SizedBox(
+          height: Sizes.getPixelSize(0.01756543124, context),
+        ),
+        SizedBox(
+          width: Sizes.getScreenSize(context).width * 0.8,
+          &#47;&#47;height: Sizes.getScreenSize(context).height * 0.055,
+          child: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: CustomColors.userInputColors()
+              ),
+              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
+            ),
+            child: Row(
+              children: [
+                const SizedBox(width: 10),
+                Expanded(child: DropdownButtonFormField(
+                  dropdownColor: CustomColors.dropdownColor(),
+                  value: dropdownValue,
+                  alignment: Alignment.centerLeft,
+                  decoration: const InputDecoration(border: InputBorder.none),
+                  onChanged: (String? newValue) {
+                    &#47;&#47;setState(() {
+                    dropdownValue = newValue!;
+                    switch(title){
+                      case &#39;Duration&#39;:
+                        switch(dropdownValue){
+                          case &quot;Fast&quot;:
+                            index1 = dropdownValue;
+                            param6.call(&quot;This should take a couple of minutes. To be fair it&#39;s a lot of time, don&#39;t be ashamed...&quot;);
+                            break;
+                          case &quot;Mid&quot;:
+                            index1 = dropdownValue;
+                            param6.call(&quot;5 minutes maximum, it&#39;s only 10 questions!&quot;);
+                            break;
+                          case &quot;Large&quot;:
+                            index1 = dropdownValue;
+                            param6.call(&quot;I mean it&#39;s 20 questions at 20 seconds per question plus 5 seconds per answer: (20 * (20+5))&#47;60 = 8.3 minutes&quot;);
+                            break;
+                          case &quot;Marathon&quot;:
+                            index1 = dropdownValue;
+                            param6.call(&quot;Ah yes, 30 questions. Consider touching some grass...&quot;);
+                            break;
+                        }
+                        index1 = dropdownValue;
+                        break;
+                      case &#39;Difficulties&#39;:
+                        index2 = dropdownValue;
+                        switch(dropdownValue){
+                          case &quot;Any&quot;:
+                            param6.call(&quot;You&#39;ll get a mix of easy, medium, hard and extreme questions; balanced, as everything should be.&quot;);
+                            break;
+                          case &quot;Easy&quot;:
+                            param6.call(&quot;Only easy questions for the kids of the family!&quot;);
+                            break;
+                          case &quot;Medium&quot;:
+                            param6.call(&quot;Not a real challenge, I hope you won&#39;t be able to fail this...&quot;);
+                            break;
+                          case &quot;Hard&quot;:
+                            param6.call(&quot;The challenge begins, with a little luck you might hit one!&quot;);
+                            break;
+                        &#47;*case &quot;Extreme&quot;:
+                          param6.call(&quot;Do you really have what it takes?&quot;);
+                          break;*&#47;
+                        }
+                        break;
+                      case &#39;Category&#39;:
+                        index3 = dropdownValue;
+                        switch(dropdownValue){
+                          case &quot;Any&quot;:
+                            param6.call(&quot;Questions from all categories, shaken and stirred up.&quot;);
+                            break;
+                          case &quot;GeneralKnowledge&quot;:
+                            param6.call(&quot;A little here and a little there, it can be anything.&quot;);
+                            break;
+                          case &quot;Entertainment&quot;:
+                            param6.call(&quot;If you are one of those who have seen all the episodes of Friends, this is your category!&quot;);
+                            break;
+                          case &quot;Science&quot;:
+                            param6.call(&quot;If you don’t know if the mitochondria is the powerhouse of the cell, change category.&quot;);
+                            break;
+                          case &quot;Sports&quot;:
+                            param6.call(&quot;Remember that as much as you get all the questions right, you will still run out of breath after going up ten stairs.&quot;);
+                            break;
+                          case &quot;Mythology&quot;:
+                            param6.call(&quot;If you think that the Thor character was created by Marvel, you should rethink a lot of things.&quot;);
+                            break;
+                          case &quot;Art&quot;:
+                            param6.call(&quot;\&quot;To play, or not to play, that is the question.\&quot;&quot;);
+                            break;
+                          case &quot;History&quot;:
+                            param6.call(&quot;Are you amazing at remembering dates that nobody cares about events that matter even less?&quot;);
+                            break;
+                        }
+                        break;
+                    }
+                    &#47;&#47;});
+                  },
+                  items: array.map&lt;DropdownMenuItem&lt;String&gt;&gt;((String value) {
+                    return DropdownMenuItem&lt;String&gt;(
+                        value: value,
+                        alignment: Alignment.center,
+                        child: Center(child: Text(
+                          value,
+                          style: ts,
+                        ),)
+                    );
+                  }).toList(),
+                )
+                ),
+              ],
+            ),
+          ),
+        ),
+        SizedBox(height: Sizes.getPixelSize(0.01152870648, context)),
+        SizedBox(
+          width: Sizes.getUserInputSize(context).width,
+          height: Sizes.getPixelSize(0.05269629369,context),
+          child: Row(
+              children: [
+                const Image(image: AssetImage(&#39;assets&#47;icons&#47;infoIcon.png&#39;), width: 20,height: 20),
+                Separators.horizontalSeparator(0.02, context),
+                Expanded(child: SizedBox(
+                  child: Text(message, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: Colors.white)),
+                ))
+              ]
+          ),
+        ),
+        SizedBox(height: Sizes.getPixelSize(0.02305741296, context))
+      ]
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../../index.html">equizz</a></li>
+  <li><a href="../../global_widgets_drop_downs/global_widgets_drop_downs-library.html">drop_downs</a></li>
+  <li><a href="../../global_widgets_drop_downs/DropDowns-class.html">DropDowns</a></li>
+  <li class="self-crumb">dropDown method</li>
+</ol>
+
+
+    <h5>DropDowns class</h5>
+    <ol>
+
+        <li class="section-title"><a href="../../global_widgets_drop_downs/DropDowns-class.html#constructors">Constructors</a></li>
+          <li><a href="../../global_widgets_drop_downs/DropDowns/DropDowns.html">DropDowns</a></li>
+
+
+    <li class="section-title inherited">
+      <a href="../../global_widgets_drop_downs/DropDowns-class.html#instance-properties">Properties</a>
+    </li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+    <li class="section-title inherited"><a href="../../global_widgets_drop_downs/DropDowns-class.html#instance-methods">Methods</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
+
+    <li class="section-title inherited"><a href="../../global_widgets_drop_downs/DropDowns-class.html#operators">Operators</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+        <li class="section-title"><a href="../../global_widgets_drop_downs/DropDowns-class.html#static-properties">Static properties</a></li>
+          <li><a href="../../global_widgets_drop_downs/DropDowns/index1.html">index1</a></li>
+          <li><a href="../../global_widgets_drop_downs/DropDowns/index2.html">index2</a></li>
+          <li><a href="../../global_widgets_drop_downs/DropDowns/index3.html">index3</a></li>
+
+        <li class="section-title"><a href="../../global_widgets_drop_downs/DropDowns-class.html#static-methods">Static methods</a></li>
+          <li><a href="../../global_widgets_drop_downs/DropDowns/dropDown.html">dropDown</a></li>
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    equizz
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
